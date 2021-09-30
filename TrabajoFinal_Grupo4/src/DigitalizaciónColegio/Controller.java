@@ -10,7 +10,7 @@ public class Controller {
         view = new View();
     }
 
-    public void registrarAlumno(String... arg) {
+    public void registrarAlumno(String... arg) throws NotaPonderadoFinalGradoAnteriorIncorrecto{
         Alumno alumno = Factoria.dameObjeto(arg);
         colegio.registrar(alumno);
     }

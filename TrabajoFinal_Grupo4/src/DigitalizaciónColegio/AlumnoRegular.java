@@ -7,8 +7,11 @@ public class AlumnoRegular extends Alumno{
     public AlumnoRegular() {
     }
 
-    public AlumnoRegular(String dni, String nombres, String apellidos, int edad, int grado, double notaPonderadoFinalGradoAnterior) {
+    public AlumnoRegular(String dni, String nombres, String apellidos, int edad, int grado, double notaPonderadoFinalGradoAnterior) throws NotaPonderadoFinalGradoAnteriorIncorrecto {
         super(dni, nombres, apellidos, edad, grado);
+        if(notaPonderadoFinalGradoAnterior<0 || notaPonderadoFinalGradoAnterior>20){
+            throw new NotaPonderadoFinalGradoAnteriorIncorrecto();
+        }
         this.notaPonderadoFinalGradoAnterior = notaPonderadoFinalGradoAnterior;
     }
 

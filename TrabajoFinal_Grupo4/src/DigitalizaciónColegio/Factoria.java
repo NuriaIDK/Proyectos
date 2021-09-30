@@ -1,7 +1,7 @@
 package DigitalizaciónColegio;
 
 public class Factoria {
-    public static Alumno dameObjeto(String... arg){
+    public static Alumno dameObjeto(String... arg) throws NotaPonderadoFinalGradoAnteriorIncorrecto {
 
         Alumno alumno = null;
 
@@ -13,7 +13,7 @@ public class Factoria {
                 alumno = new AlumnoNuevo(arg[1],arg[2],arg[3],Integer.parseInt(arg[4]),Integer.parseInt(arg[5]),arg[6]);
                 break;
         }
-        return alumno;
+        return  alumno;
     }
 }
 
