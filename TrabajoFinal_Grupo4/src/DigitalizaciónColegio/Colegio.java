@@ -18,6 +18,17 @@ public class Colegio {
     }
 
 
+    public Alumno obtenerDatosXDNIAlumno(String dni){
+        Alumno datos=null;
+        for(Alumno p:alumnos){
+            if (p.getDni().equals(dni)){
+                datos = p;
+            }
+        }
+        return datos;
+    }
+
+
     public void registrar(Alumno alumno){
         this.alumnos.add(alumno);
     }

@@ -19,6 +19,13 @@ public class Controller {
         view.imprimirListado(colegio.getAlumnos());
     }
 
+
+    public void mostrarBusquedaxDNIalumno() {
+        Alumno p = colegio.obtenerDatosXDNIAlumno("780315694");
+        view.mostrarBusquedaxDNIalumno(p);
+    }
+
+
     public Colegio getColegio() {
         return colegio;
     }

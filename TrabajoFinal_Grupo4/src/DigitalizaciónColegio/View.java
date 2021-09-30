@@ -11,4 +11,8 @@ public class View {
         System.out.println("\nFIN");
     }
 
+    public void mostrarBusquedaxDNIalumno(Alumno p) {
+        System.out.println("\nBusqueda por DNI alumno: ");
+        System.out.println("\nSus datos registrados son los siguientes: " + "\n"+p.toString());
+    }
 }
