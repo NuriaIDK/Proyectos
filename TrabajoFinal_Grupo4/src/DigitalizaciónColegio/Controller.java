@@ -6,7 +6,8 @@ public class Controller {
     private View view;
 
     public Controller(String nombre) {
-        colegio = Colegio.obtenerInstancia(nombre);
+        colegio = Colegio.obtenerInstanciaAlumno(nombre);
+        colegio = Colegio.obtenerInstanciaProfesor(nombre);
         view = new View();
     }
 
@@ -24,6 +25,23 @@ public class Controller {
         Alumno p = colegio.obtenerDatosXDNIAlumno("780315694");
         view.mostrarBusquedaxDNIalumno(p);
     }
+
+
+    public void registrarProfesor(String... arg) throws SueldoMaximoException{
+        Profesor profesor = ProfesorFactoria.crear(arg);
+        colegio.registrarProfesor(profesor);
+    }
+
+    public void buscarXDNIProfesor() throws SueldoMaximoException {
+        Profesor profesor = Colegio.obtenerDatosXDNIProfesor("45708997");
+        view.mostrarDatosProfesor(profesor);
+    }
+
+
+    public void mostrarListadoProfesor() {
+        view.printListadoProfesor(colegio.getProfesores());
+    }
+
 
 
     public Colegio getColegio() {
