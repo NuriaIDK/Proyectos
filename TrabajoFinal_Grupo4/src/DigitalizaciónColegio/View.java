@@ -32,5 +32,8 @@ public class View {
     }
 
 
-
+    public void mostrarBusquedaxDNIProfesor(Profesor profesor) {
+        System.out.println("\nBusqueda por DNI Profesor: ");
+        System.out.println("\nSus datos registrados son los siguientes: " + "\n"+profesor.obetenerDatos());
+    }
 }

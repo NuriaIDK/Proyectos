@@ -12,6 +12,7 @@ public class Colegio {
 
     private Colegio() {
     }
+
     public static Colegio obtenerInstanciaAlumno(String nombre){
         colegio.setNombre(nombre);
         alumnos = new ArrayList<>();
@@ -26,7 +27,7 @@ public class Colegio {
     }
 
 
-    public Alumno obtenerDatosXDNIAlumno(String dni){
+    public static Alumno obtenerDatosXDNIAlumno(String dni){
         Alumno datos=null;
         for(Alumno p:alumnos){
             if (p.getDni().equals(dni)){

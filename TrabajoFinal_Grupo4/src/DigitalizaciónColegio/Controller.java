@@ -32,9 +32,9 @@ public class Controller {
         colegio.registrarProfesor(profesor);
     }
 
-    public void buscarXDNIProfesor() throws SueldoMaximoException {
+    public void buscarXDNIProfesor(){
         Profesor profesor = Colegio.obtenerDatosXDNIProfesor("45708997");
-        view.mostrarDatosProfesor(profesor);
+        view.mostrarBusquedaxDNIProfesor(profesor);
     }
 
 
